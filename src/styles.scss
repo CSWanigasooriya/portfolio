@@ -1,1 +1,124 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  min-width: 100%;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+.sidenav::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+.sidenav {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+main {
+  flex: 1 0 auto;
+  margin-top: -64px;
+}
+
+header,
+main,
+footer {
+  padding-left: 300px;
+}
+
+@media only screen and (max-width: 992px) {
+  header,
+  main,
+  footer {
+    padding-left: 0;
+  }
+
+  .main-header {
+    font-size: 3em;
+  }
+
+  main {
+    margin-top: 10px !important;
+  }
+}
+
+.table-of-contents li > a.active {
+  font-weight: 500;
+  padding-left: 18px;
+  border-left: 2px solid #000000;
+}
+
+.table-of-contents li > a:hover {
+  font-weight: 500;
+  padding-left: 18px;
+  border-left: 2px solid #00000050;
+}
+
+.transparent {
+  background-color: #ffffff00;
+}
+
+.btn.menu-btn {
+  border-bottom-left-radius: 2em !important;
+  border-bottom-right-radius: 2em !important;
+}
+
+#banner-btn {
+  margin-right: 1em;
+  margin-bottom: 1em;
+  border-radius: 15em !important;
+}
+
+div {
+  word-wrap: break-word;
+}
+
+.card {
+  border-radius: 1em;
+}
+
+.rounded-btn {
+  border-radius: 2em !important;
+}
+
+.rounded-item {
+  border-radius: 1em !important;
+}
+
+.carousel-item {
+  border-radius: 1em;
+}
+
+.carousel-item p {
+  padding: 1em;
+}
+
+h5 span {
+  font-size: medium;
+}
+
+.pin-top {
+  position: relative;
+}
+
+.pin-bottom {
+  position: relative;
+}
+
+.pinned {
+  position: fixed !important;
+}
+
+.confident li {
+  list-style-type: circle !important;
+}

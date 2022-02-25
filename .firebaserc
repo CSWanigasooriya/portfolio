@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "chamath-wanigasooriya": {
+      "hosting": {
+        "chamathwanigasooriya": [
+          "chamath-wanigasooriya"
+        ]
+      }
+    }
+  }
+}
