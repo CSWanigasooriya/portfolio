@@ -1,89 +1,109 @@
-<header>
-  <div class="navbar-fixed">
-    <nav class="transparent z-depth-0">
-      <div class="nav-wrapper">
-        <a data-target="slide-out" class="sidenav-trigger btn blue darken-3 menu-btn"><i
-            class="material-icons">menu</i></a>
+<div class="app-layout">
+  @if (sidenavOpen()) {
+    <div class="sidenav-backdrop" (click)="toggleSidenav(false)"></div>
+  }
+
+  <header class="app-bar">
+    <div class="app-bar-inner">
+      <button
+        class="app-bar-btn menu-btn"
+        aria-label="Toggle navigation"
+        (click)="toggleSidenav()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <a class="app-bar-brand" routerLink="/" (click)="toggleSidenav(false)">
+        <span class="brand-mark">CW</span>
+        <span class="brand-name">Chamath Wanigasooriya</span>
+      </a>
+
+      <nav class="nav-links" appSnappyScroll>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button
+        class="app-bar-btn theme-btn"
+        [attr.aria-label]="theme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+        (click)="toggleTheme()">
+        @if (theme() === 'dark') {
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <line x1="12" y1="2" x2="12" y2="4"></line>
+            <line x1="12" y1="20" x2="12" y2="22"></line>
+            <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+            <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+            <line x1="2" y1="12" x2="4" y2="12"></line>
+            <line x1="20" y1="12" x2="22" y2="12"></line>
+            <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+            <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+          </svg>
+        } @else {
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        }
+      </button>
+    </div>
+  </header>
+
+  <aside class="sidenav" [class.open]="sidenavOpen()">
+    <div class="sidenav-user">
+      <img class="user-avatar" src="/assets/avatar.jpg" alt="Chamath Wanigasooriya" />
+      <div>
+        <div class="user-name">Chamath Wanigasooriya</div>
+        <div class="user-email">chamathwanigasooriya@gmail.com</div>
       </div>
+    </div>
+    <nav class="sidenav-links" appSnappyScroll>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="toggleSidenav(false)">Profile</a>
+      <a href="#projects" (click)="toggleSidenav(false)">Projects</a>
+      <a href="#experience" (click)="toggleSidenav(false)">Experience</a>
+      <a href="#contact" (click)="toggleSidenav(false)">Contact</a>
     </nav>
+  </aside>
+
+  <div class="app-content">
+    <router-outlet></router-outlet>
   </div>
-  <ul id="slide-out" class="sidenav sidenav-fixed">
-    <li>
-      <div class="user-view">
-        <div class="background">
-          <img src="../assets/wallpaper.png">
-        </div>
-        <a><img class="circle" src="../assets/avatar.jpg"></a>
-        <a><span class="white-text name">Chamath Wanigasooriya</span></a>
-        <a><span class="white-text email">chamathwanigasooriya@gmail.com</span></a>
+
+  @if (showBackToTop()) {
+    <button class="back-to-top" aria-label="Back to top" (click)="backToTop()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+  }
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-contact">
+        <h5>Contact</h5>
+        <p>Phone: +94762992256</p>
+        <p>Email: chamathwanigasooriya@gmail.com</p>
       </div>
-    </li>
-    <ul class="collapsible collapsible-accordion">
-      <li>
-        <a class="tab collapsible-header waves-effect waves-blue" [routerLink]="['']"><i
-            class="material-icons">person</i>Profile</a>
-        <div class="collapsible-body">
-        </div>
-      </li>
-      <li>
-        <a class="collapsible-header waves-effect waves-blue" [routerLink]="['/second']"><i
-            class="material-icons">business_center</i>Second Year Project</a>
-        <div class="collapsible-body">
-        </div>
-      </li>
-      <li>
-        <a class="collapsible-header waves-effect waves-blue" [routerLink]="['/final']"><i
-            class="material-icons">apartment</i>Final
-          Year Project</a>
-        <div class="collapsible-body">
-        </div>
-      </li>
-    </ul>
-  </ul>
-</header>
-
-
-<router-outlet></router-outlet>
-
-<footer class="page-footer black">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Contact Me</h5>
-        <p class="grey-text text-lighten-4">Phone: +94762992256</p>
-        <p class="grey-text text-lighten-4">Email: chamathwanigasooriya@gmail.com</p>
-      </div>
-      <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Links</h5>
-        <ul>
-          <li><a class="grey-text text-lighten-3" href="https://g.dev/wanigasooriya">Google Developer Profile</a></li>
-          <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/cswanigasooriya">Facebook</a></li>
-
-          <li><a class="grey-text text-lighten-3" href="https://github.com/CSWanigasooriya">GitHub</a>
-          </li>
-          <li><a class="grey-text text-lighten-3" href="https://twitter.com/CSWanigasooriya">Twitter</a>
-          </li>
-          <li>
-            <a class="grey-text text-lighten-3" href="https://linkedin.com/in/cswanigasooriya">LinkedIn</a>
-          </li>
-          <li>
-            <a class="grey-text text-lighten-3"
-              href="https://stackoverflow.com/users/8768899/chamath-wanigasooriya">Stackoverflow</a>
-          </li>
-          <li>
-            <a class="grey-text text-lighten-3"
-              href="https://www.researchgate.net/profile/Chamath-Wanigasooriya/research">Research Gate</a>
-          </li>
+      <div>
+        <h5>Links</h5>
+        <ul class="footer-links">
+          <li><a href="https://g.dev/wanigasooriya">Google Developer Profile</a></li>
+          <li><a href="https://www.facebook.com/cswanigasooriya">Facebook</a></li>
+          <li><a href="https://github.com/CSWanigasooriya">GitHub</a></li>
+          <li><a href="https://twitter.com/CSWanigasooriya">Twitter</a></li>
+          <li><a href="https://linkedin.com/in/cswanigasooriya">LinkedIn</a></li>
+          <li><a href="https://stackoverflow.com/users/8768899/chamath-wanigasooriya">Stackoverflow</a></li>
+          <li><a href="https://www.researchgate.net/profile/Chamath-Wanigasooriya/research">Research Gate</a></li>
         </ul>
       </div>
     </div>
-  </div>
-  <div class="footer-copyright">
-    <div class="container">
-      © 2021 Chamath Wanigasooriya
-      <a class="grey-text text-lighten-4 right"
-        href="https://www.google.com/search?q=chamath+wanigasooriya&oq=chamath+wanigasooriya&aqs=chrome..69i57j0i333l4j69i61.6042j0j7&sourceid=chrome&ie=UTF-8">More
-        Links</a>
+    <div class="footer-bottom">
+      <span>© {{ currentYear }} Chamath Wanigasooriya</span>
+      <a href="https://www.google.com/search?q=chamath+wanigasooriya">More Links</a>
     </div>
-  </div>
-</footer>
+  </footer>
+</div>

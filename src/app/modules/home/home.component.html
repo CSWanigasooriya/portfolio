@@ -1,954 +1,588 @@
-<main id="content">
-  <div class="parallax-container valign-wrapper">
-    <div class="container">
-      <div class="section" id="index-banner">
-        <h1 class="main-header cyan-text text-darken-4"></h1>
-        <div class="row">
-          <h5 class="header col s12 light">
-            A Self Motivated Software Developer
-          </h5>
+<main id="content" appSnappyScroll>
+  <!-- ======================= HERO ======================= -->
+  <section class="hero">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-content hero-split">
+      <div class="hero-copy">
+        <span class="hero-eyebrow hero-enter">Software Engineer · Java / Angular</span>
+        <h1 class="main-header hero-title"></h1>
+        <p class="hero-subtitle hero-enter" style="--d: 0.12s">
+          I design and build fast, scalable, and well-crafted web applications —
+          from resilient Java back-ends to polished Angular front-ends.
+        </p>
+        <div class="hero-status hero-enter" style="--d: 0.22s">
+          <span class="status-dot" aria-hidden="true"></span>
+          Available for new opportunities
         </div>
-        <div class="row">
-          <a id="banner-btn" class="btn-large waves-effect waves-light cyan darken-3" href="#projects">Projects</a>
-          <a id="banner-btn" class="btn-large waves-effect waves-light blue-grey"
-            href="assets/Chamath_Wanigasooriya.pdf" target="_blank">Download Resume</a>
+        <div class="hero-actions hero-enter" style="--d: 0.32s">
+          <a class="btn btn-primary" href="#projects">
+            View Projects
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a class="btn btn-secondary" href="/assets/Chamath_Wanigasooriya.pdf" download="Chamath_Wanigasooriya_Resume.pdf">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download Resume
+          </a>
         </div>
-        <br />
+        <ul class="hero-stats hero-enter" style="--d: 0.42s">
+          <li><strong>3+</strong><span>Years</span></li>
+          <li><strong>7+</strong><span>Projects</span></li>
+          <li><strong>4</strong><span>Publications</span></li>
+        </ul>
       </div>
-    </div>
 
-    <div class="parallax">
-      <img src="../../../assets/banner.png" class="responsive-img hide-on-med-and-down" />
-    </div>
-  </div>
-  <div class="divider"></div>
-  <div class="row">
-    <div class="col s12 m9 l10">
-      <div id="introduction" class="section scrollspy">
-        <div class="container">
-          <h4>About Me</h4>
-          <p>
-            I am a quick learner and self starter person and can adopt any kind
-            of work environment quickly. My objective is to secure a position
-            where I could learn new technologies with practical applications
-            that would be useful for the growth of the organization & further
-            enhance my career prospect through continuous learning as well as to
-            excel in my field by hard work, research, skill and perseverance
-            thereby contributing my best to the organization's success and my
-            personal growth.
-          </p>
+      <div class="hero-visual">
+        <span class="float-chip chip-java" aria-hidden="true">Java</span>
+        <span class="float-chip chip-angular" aria-hidden="true">Angular</span>
+        <span class="float-chip chip-spring" aria-hidden="true">Spring</span>
+        <div class="avatar-frame hero-avatar" appTilt [tiltMax]="10">
+          <img src="/assets/avatar.jpg" alt="Chamath Wanigasooriya" />
         </div>
-      </div>
-    </div>
-    <div class="col s12 m3 l2 hide-on-med-and-down">
-      <div class="toc-wrapper" id="toc-wrapper">
-        <ul class="section table-of-contents">
-          <li><a href="#introduction">About Me</a></li>
-          <li><a href="#confident">What I'm Good At</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#work">Work Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#qualifications">Qualifications</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#tools">What I Use</a></li>
+        <ul class="social-list hero-enter" style="--d: 0.26s">
+          <li><a href="https://github.com/CSWanigasooriya" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.69 1.25 3.35.95.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.26 5.66.41.35.78 1.05.78 2.12v3.14c0 .3.2.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          </a></li>
+          <li><a href="https://linkedin.com/in/cswanigasooriya" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5c0 .97.8 1.75 1.77 1.75h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>
+          </a></li>
+          <li><a href="https://twitter.com/CSWanigasooriya" aria-label="Twitter / X">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41z"/></svg>
+          </a></li>
+          <li><a href="mailto:chamathwanigasooriya@gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a></li>
         </ul>
       </div>
     </div>
-    <div class="row">
-      <div class="col s12 m9 l10">
-        <div id="confident" class="section scrollspy">
-          <div class="container">
-            <h4>What I'm Good At</h4>
 
+    <a class="scroll-cue" href="#about" aria-label="Scroll to content">
+      <span class="mouse" aria-hidden="true"></span>
+      Scroll
+    </a>
+  </section>
+
+  <!-- ======================= TECH MARQUEE ======================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-inner">
+      @for (pass of [0, 1]; track pass) {
+        <div class="marquee-group">
+          <span>Java</span><i>·</i><span>Spring Boot</span><i>·</i>
+          <span>Angular</span><i>·</i><span>TypeScript</span><i>·</i>
+          <span>Python</span><i>·</i><span>AWS</span><i>·</i>
+          <span>Docker</span><i>·</i><span>Kubernetes</span><i>·</i>
+          <span>PostgreSQL</span><i>·</i><span>Redis</span><i>·</i>
+          <span>TensorFlow.js</span><i>·</i><span>Firebase</span><i>·</i>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- ======================= SECTION NAV ======================= -->
+  <nav class="section-nav" aria-label="Sections">
+    <div class="section-nav-inner">
+      @for (section of navSections; track section) {
+        <a href="#{{ section }}"
+          [class.active]="activeSection() === section"
+          [attr.data-label]="section">{{ section }}</a>
+      }
+    </div>
+  </nav>
+
+  <!-- ======================= ABOUT ======================= -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head" appScrollReveal>
+        <span class="section-label">About</span>
+        <h2 class="section-title" appTextReveal>Who I am</h2>
+        <p class="section-sub">
+          A quick learner and self-starter who adapts to any work environment —
+          focused on continuous learning and building reliable software.
+        </p>
+      </div>
+
+      <div class="about-grid" appScrollReveal>
+        <div class="about-card about-focus panel">
+          <div class="card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </div>
+          <div>
+            <h3>My focus</h3>
+            <p>
+              I work across the stack — architecting resilient Java back-ends with
+              Spring, and crafting fast, accessible front-ends with Angular. I care
+              about performance, maintainability, and delivering value to the
+              organization through hard work, research, and perseverance.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-card about-facts panel">
+          <div class="card-icon sm">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3>Quick facts</h3>
+          <ul class="facts-list">
+            <li><span class="fact-label">Location</span><span>Sri Lanka · Remote-friendly</span></li>
+            <li><span class="fact-label">Stack</span><span>Back-end &amp; Front-end</span></li>
+            <li><span class="fact-label">Focus</span><span>Microservices &amp; Cloud</span></li>
+            <li><span class="fact-label">Status</span><span class="fact-open">Open to work</span></li>
+          </ul>
+        </div>
+
+        <div class="about-card about-highlights panel">
+          <div class="card-icon sm">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          </div>
+          <h3>Highlights</h3>
+          <ul class="about-list">
+            <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Resolved performance issues on AWS EC2, ECS, and Docker.</li>
+            <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Designed scalable microservices and modular architectures.</li>
+            <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Automated pipelines and tooling to accelerate delivery.</li>
+            <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Published research in blockchain and software quality.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= SKILLS ======================= -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-head" appScrollReveal>
+        <span class="section-label">Stack</span>
+        <h2 class="section-title" appTextReveal>Skills</h2>
+        <p class="section-sub">
+          The tools and technologies I rely on to ship reliable products.
+        </p>
+      </div>
+
+      <div class="skills-grid" appScrollReveal>
+        @for (group of skillGroups; track group.title; let i = $index) {
+          @switch (i) {
+            @case (0) {
+              <div class="skill-group panel">
+                <div class="skill-group-head">
+                  <span class="card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                  </span>
+                  <div>
+                    <h3>{{ group.title }}</h3>
+                    <span class="skill-group-sub">Core languages &amp; frameworks</span>
+                  </div>
+                </div>
+                <div class="skill-tiles">
+                  @for (skill of group.skills; track skill.label) {
+                    <a class="skill" [href]="skill.url" target="_blank" [title]="skill.label">
+                      <span class="skill-badge">{{ skill.label.charAt(0) }}</span>{{ skill.label }}
+                    </a>
+                  }
+                </div>
+              </div>
+            }
+            @case (1) {
+              <div class="skill-group panel">
+                <div class="skill-group-head">
+                  <span class="card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"></path></svg>
+                  </span>
+                  <div>
+                    <h3>{{ group.title }}</h3>
+                    <span class="skill-group-sub">Infrastructure &amp; delivery</span>
+                  </div>
+                </div>
+                <div class="skill-tiles">
+                  @for (skill of group.skills; track skill.label) {
+                    <a class="skill" [href]="skill.url" target="_blank" [title]="skill.label">
+                      <span class="skill-badge">{{ skill.label.charAt(0) }}</span>{{ skill.label }}
+                    </a>
+                  }
+                </div>
+              </div>
+            }
+            @case (2) {
+              <div class="skill-group panel">
+                <div class="skill-group-head">
+                  <span class="card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                  </span>
+                  <div>
+                    <h3>{{ group.title }}</h3>
+                    <span class="skill-group-sub">Data &amp; in-memory caching</span>
+                  </div>
+                </div>
+                <div class="skill-tiles">
+                  @for (skill of group.skills; track skill.label) {
+                    <a class="skill" [href]="skill.url" target="_blank" [title]="skill.label">
+                      <span class="skill-badge">{{ skill.label.charAt(0) }}</span>{{ skill.label }}
+                    </a>
+                  }
+                </div>
+              </div>
+            }
+            @case (3) {
+              <div class="skill-group panel">
+                <div class="skill-group-head">
+                  <span class="card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                  </span>
+                  <div>
+                    <h3>{{ group.title }}</h3>
+                    <span class="skill-group-sub">Tooling that keeps teams fast</span>
+                  </div>
+                </div>
+                <div class="skill-tiles">
+                  @for (skill of group.skills; track skill.label) {
+                    <a class="skill" [href]="skill.url" target="_blank" [title]="skill.label">
+                      <span class="skill-badge">{{ skill.label.charAt(0) }}</span>{{ skill.label }}
+                    </a>
+                  }
+                </div>
+              </div>
+            }
+          }
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= PROJECTS ======================= -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head" appScrollReveal>
+        <span class="section-label">Projects</span>
+        <h2 class="section-title" appTextReveal>Selected Work</h2>
+        <p class="section-sub">
+          A few things I've built — spanning the web, mobile, and hardware.
+        </p>
+      </div>
+
+      <div class="filter-bar">
+        @for (cat of categories; track cat) {
+          <button class="filter-pill"
+            [class.active]="activeFilter() === cat"
+            (click)="setFilter(cat)">
+            {{ cat }}
+          </button>
+        }
+      </div>
+
+      <div class="projects-grid stagger" appScrollReveal>
+        @for (project of filteredProjects(); track project.title; let i = $index) {
+          <article class="project-card panel" appTilt [tiltMax]="6" [tiltScale]="1.02">
+            <div class="project-accent" [style.--proj]="project.color"></div>
+            <div class="project-head">
+              <div class="project-title-wrap">
+                <span class="project-index">0{{ i + 1 }}</span>
+                <h3 class="project-title">{{ project.title }}</h3>
+              </div>
+              @if (project.link) {
+                <a class="project-link" [href]="project.link" target="_blank" rel="noopener" aria-label="View source on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              }
+            </div>
+            <p class="project-desc">{{ project.description }}</p>
+            <div class="project-meta">
+              <span class="project-lang">{{ project.tech }}</span>
+              <div class="project-tags">
+                @for (cat of project.categories; track cat) {
+                  <span class="chip">{{ cat }}</span>
+                }
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+
+      <div class="view-all-line">
+        <a class="btn btn-ghost" href="https://github.com/CSWanigasooriya" target="_blank" rel="noopener">
+          View all on GitHub
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= SHOWCASE ======================= -->
+  <section class="showcase" appShowcase aria-label="How I build">
+    <div class="showcase-track">
+      <div class="showcase-sticky">
+        @for (panel of showcasePanels; track panel.id; let i = $index) {
+          <div class="showcase-panel" [style.--panel]="panel.theme">
+            <div class="showcase-panel-bg" aria-hidden="true"></div>
+            <div class="showcase-panel-inner">
+              <div class="showcase-copy">
+                <span class="showcase-kicker">{{ panel.kicker }}</span>
+                <h3 class="showcase-title">{{ panel.title }}</h3>
+                <p class="showcase-desc">{{ panel.description }}</p>
+                <div class="showcase-chips">
+                  @for (chip of panel.chips; track chip) {
+                    <span class="chip">{{ chip }}</span>
+                  }
+                </div>
+              </div>
+              <div class="showcase-art" aria-hidden="true">
+                <span class="showcase-num">0{{ i + 1 }}</span>
+              </div>
+            </div>
+          </div>
+        }
+
+        <aside class="showcase-nav" aria-hidden="true">
+          <div class="showcase-dots">
+            @for (panel of showcasePanels; track panel.id) {
+              <span class="showcase-dot"></span>
+            }
+          </div>
+          <span class="showcase-counter">01</span>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= EXPERIENCE ======================= -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-head" appScrollReveal>
+        <span class="section-label">Career</span>
+        <h2 class="section-title" appTextReveal>Experience</h2>
+        <p class="section-sub">
+          Where I've grown from graduate trainee to senior engineer.
+        </p>
+      </div>
+
+      <div class="timeline" appScrollReveal>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card panel">
+            <div class="timeline-head">
+              <div class="company">
+                <span class="company-logo">CG</span>
+                <div>
+                  <h3>CodeGen International (Pvt) Ltd.</h3>
+                  <p class="timeline-role">Senior Software Engineer · Software Engineer · Associate Software Engineer · Graduate Trainee</p>
+                </div>
+              </div>
+              <span class="timeline-range">2022 — Present</span>
+            </div>
             <ul class="confident">
-              <li>
-                Website and software application designing, building, or
-                maintaining.
-              </li>
-              <li>
-                Using scripting or authoring languages, management tools,
-                content creation tools, applications, and digital media.
-              </li>
-              <li>
-                Conferring with teams to resolve conflicts, prioritize needs,
-                develop content criteria, or choose solutions.
-              </li>
-              <li>Directing or performing Website updates.</li>
-              <li>
-                Developing or validating test routines and schedules to ensure
-                that test cases mimic external interfaces and address all
-                browser and device types.
-              </li>
-              <li>
-                Editing, writing, or designing Website content, and directing
-                team members who produce content.
-              </li>
-              <li>
-                Maintaining an understanding of the latest Web applications and
-                programming practices through education, study, and
-                participation in conferences, workshops, and groups.
-              </li>
-              <li>
-                Identifying problems uncovered by customer feedback and testing,
-                and correcting or referring problems to appropriate personnel
-                for correction.
-              </li>
-              <li>
-                Evaluating code to ensure it meets industry standards, is valid,
-                is properly structured,and is compatible with browsers, devices,
-                or operating systems.
-              </li>
-              <li>
-                Determining user needs by analyzing technical requirements.
-              </li>
+              <li>Resolved performance issues in applications running on AWS EC2, ECS, and Docker containers.</li>
+              <li>Developed Java enhancements, with experience in Spring, JSP, Java Beans, Tomcat, and ORM.</li>
+              <li>Familiar with caching using Redis and Hazelcast to improve application performance.</li>
+              <li>Designed and implemented microservices, improving scalability and maintainability.</li>
+              <li>Worked on modular monolith architectures using SOAP and REST services.</li>
+              <li>Automated configuration and environment setups, enhancing deployment processes.</li>
+              <li>Handled client interactions to gather requirements and provide technical support.</li>
+              <li>Used Splunk for log analysis and resolved performance bottlenecks (Fortune 500 client).</li>
+              <li>Created the project's first GitLab pipeline, automating build, test, and deployment.</li>
             </ul>
           </div>
         </div>
 
-        <div id="projects" class="section scrollspy">
-          <div class="container">
-            <h4>Projects</h4>
-            <ul class="collection rounded-item">
-              <li class="collection-item avatar">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/112px-Tensorflow_logo.svg.png"
-                  class="circle" />
-                <span class="title">MNIST Handwritten Digit Classification</span>
-                <p>
-                  Angular App with Object Detection and Digit Recognizer, Using
-                  TensorFlow.js & MNIST Handwritten Digit Classification.
-                </p>
-              </li>
-              <li class="collection-item avatar">
-                <img src="https://cdn-icons-png.flaticon.com/512/8812/8812428.png" class="circle" />
-                <span class="title">University Results Management System</span>
-                <p>Angular Application for University Results Management</p>
-              </li>
-              <li class="collection-item avatar">
-                <img src="https://icon-library.com/images/google-translate-icon/google-translate-icon-28.jpg"
-                  class="circle" />
-                <span class="title">English-Sinhala Android Translator</span>
-                <p>An Android App to Translate English Words to Sinhala.</p>
-              </li>
-              <li class="collection-item avatar">
-                <img src="https://logodix.com/logo/2013274.png" class="circle" />
-                <span class="title">Student Management System</span>
-                <p>Java Student Management System.</p>
-              </li>
-              <li class="collection-item avatar">
-                <img
-                  src="https://image.winudf.com/v2/image1/Y2MuYmx5bmtfaWNvbl8xNTU0ODI2Njc2XzAxNw/icon.png?fakeurl=1&h=160&type=webp"
-                  class="circle" />
-                <span class="title">Arduino Phone Follower</span>
-                <p>
-                  An arduino project using u-Blox neo 6m GPS + QMC5883L & HC-06
-                  bluetooth that follows a phone
-                </p>
-              </li>
-              <li class="collection-item avatar">
-                <img src="https://www.nicepng.com/png/full/256-2564814_piano-logo-may-19-piano-teaching-logo.png"
-                  class="circle" />
-                <span class="title">MIDI-Piano</span>
-                <p>Android Piano App</p>
-              </li>
-              <li class="collection-item avatar">
-                <img src="https://www.edmission.in/images/study-material/study-material.png" class="circle" />
-                <span class="title">Educational Institute Management System</span>
-                <p>
-                  Website for an institute to manage students' enrolment and the
-                  reservations of the institutes' auditorium online. PHP +
-                  Javascript + Materialize CSS.
-                </p>
-              </li>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card panel">
+            <div class="timeline-head">
+              <div class="company">
+                <span class="company-logo ai">AI</span>
+                <div>
+                  <h3>The AI Team</h3>
+                  <p class="timeline-role">Frontend Developer (Contract Basis)</p>
+                </div>
+              </div>
+              <span class="timeline-range">2022 — Present</span>
+            </div>
+            <ul class="confident">
+              <li>Worked on an e-commerce platform.</li>
+              <li>Angular, NX Monorepo, Nebular.</li>
             </ul>
-            <a href="https://github.com/CSWanigasooriya">View All</a>
           </div>
         </div>
 
-        <div id="work" class="section scrollspy grey lighten-1 rounded-item hoverable">
-          <div class="container">
-            <h4>Experience</h4>
-            <div class="row">
-              <div class="col s12">
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>
-                        CodeGen International (Pvt) Ltd. |
-                        <span>Software Engineer</span>
-                      </h5>
-                      <p>July 2022 - Present</p>
-                      <p>
-                        <strong>Senior Software Engineer (August 2024 - Present)</strong>
-                      </p>
-                      <p>July 2022 - Present</p>
-                      <p>
-                        <strong>Software Engineer (July 2023 - August 2024)</strong>
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Resolved performance issues in applications running on
-                        AWS EC2, ECS, and Docker containers.
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Developed Java enhancements to ensure stable and
-                        efficient application functionality, with experience in
-                        Spring, JSP frameworks, Java Beans, Tomcat, and ORM.
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Familiar with caching solutions using Redis and
-                        Hazelcast to improve application performance.
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Designed and implemented microservices, improving
-                        scalability and maintainability.
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Worked on Java aspects of applications with a modular
-                        monolithic architecture, utilizing both SOAP and REST
-                        services.
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Automated configuration and environment setups,
-                        enhancing deployment processes.
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Created tools to automate team tasks, leading to process
-                        improvements and increased efficiency.
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Handled client interactions to gather requirements and
-                        provide technical support.
-                      </p>
-
-                      <p>
-                        <strong>Associate Software Engineer (Jan 2023 - July
-                          2023)</strong>
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Handled performance-related issues and other reported
-                        defects for a top-ranked Fortune 500 client.
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Used Splunk for system log analysis and issue
-                        identification.
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Diagnosed and resolved performance bottlenecks in Java
-                        applications.
-                      </p>
-
-                      <p>
-                        <strong>Graduate Trainee (July 2022 - Dec 2022)</strong>
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Created the project's first GitLab pipeline, automating
-                        build, test, and deployment processes.
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Gained hands-on experience in software development and
-                        testing.
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Participated in code reviews and team meetings, learning
-                        industry best practices and software engineering
-                        principles.
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>
-                        The AI Team |
-                        <span>Frontend Developer (Contract Basis) </span>
-                      </h5>
-                      <p>Feb 2022 - Present</p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Worked on an e-commerce platform.
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Angular, NX Monorepo, Nebular.
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>
-                        Freelance | <span>Frontend Developer (Part Time)</span>
-                      </h5>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Worked on a fully functional vehicle spare part trading
-                        platform and a few other projects.
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Angular, Angular Material, and Firebase.
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card panel">
+            <div class="timeline-head">
+              <div class="company">
+                <span class="company-logo free">FL</span>
+                <div>
+                  <h3>Freelance</h3>
+                  <p class="timeline-role">Frontend Developer</p>
                 </div>
               </div>
+              <span class="timeline-range">Part Time</span>
             </div>
-          </div>
-        </div>
-        <br />
-        <div id="education" class="section scrollspy grey lighten-2 rounded-item hoverable">
-          <div class="container">
-            <h4>Education</h4>
-            <div class="row">
-              <div class="col s12">
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>University of Westminster | <span>Graduate</span></h5>
-                      <p>Expected May 2025</p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        MSc. Advanced Software Engineering
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Relevant Coursework: Machine Learning, Enterprise
-                        Application Development, Big Data, Concurrent Systems
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>
-                        Kotelawala Defence University, Rathmalana |
-                        <span>Undergraduate</span>
-                      </h5>
-                      <p>2019-2022</p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        BSc (Hons) Software Engineering | GPA: 3.68
-                      </p>
-                      <p>
-                        <a href="https://www.kdu.ac.lk/Faculty-of-Computing/2019/08/05/codefest2019/">
-                          <i class="material-icons"
-                            style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                          4<sup>th</sup> Place | Code Fest Competition 2019</a>
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Member of the Rotaract Club.
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Member of the Electronics Robotics and Innovation Club.
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>
-                        Regent International College, Gampaha |
-                        <span>Student</span>
-                      </h5>
-                      <p>2001-2017</p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Senior Prefect | 2016-2017
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Junior Prefect | 2015-2016
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        House Vice Captain | 2015-2016
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Member of Cricket Pool.
-                      </p>
-                      <p>
-                        <i class="material-icons"
-                          style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                        Member of Science Society.
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div id="qualifications" class="section scrollspy grey lighten-3 rounded-item hoverable">
-          <div class="container">
-            <h4>Certifications</h4>
-            <div class="row">
-              <div class="col s12">
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>
-                        Professional Certificate in Data Mining & Machine
-                        Learning
-                      </h5>
-                      <p>
-                        <a href="https://www.udemy.com/certificate/UC-40f5cce8-5dcf-4f3b-a788-5175c7564aff/"
-                          target="_blank">https://www.udemy.com/certificate/UC-40f5cce8-5dcf-4f3b-a788-5175c7564aff</a>
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>Professional Certificate in Data Science</h5>
-                      <p>
-                        <a href="https://www.udemy.com/certificate/UC-7b7c7c8e-04fb-4843-b27f-f46ac1877922/"
-                          target="_blank">https://www.udemy.com/certificate/UC-7b7c7c8e-04fb-4843-b27f-f46ac1877922</a>
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>TensorFlow 2 QuickStart for Beginners</h5>
-                      <p>
-                        <a href="https://www.udemy.com/certificate/UC-ee8b1acb-8de8-4e86-8661-3894246dc6b4/"
-                          target="_blank">https://www.udemy.com/certificate/UC-ee8b1acb-8de8-4e86-8661-3894246dc6b4</a>
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>
-                        Machine Learning & Data Science Bootcamp with R & Python
-                      </h5>
-                      <p>
-                        <a href="https://www.udemy.com/certificate/UC-42ee97d0-b555-4720-ac2a-1e745830e762/"
-                          target="_blank">https://www.udemy.com/certificate/UC-42ee97d0-b555-4720-ac2a-1e745830e762</a>
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>JavaScript (Basic) Certificate</h5>
-                      <p>
-                        <a href="https://www.hackerrank.com/certificates/2980cb3f3ee8"
-                          target="_blank">https://www.hackerrank.com/certificates/2980cb3f3ee8</a>
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>SQL (Basic) Certificate</h5>
-                      <p>
-                        <a href="https://www.hackerrank.com/certificates/4514575271e8"
-                          target="_blank">https://www.hackerrank.com/certificates/4514575271e8</a>
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>Java (Basic) Certificate</h5>
-                      <p>
-                        <a href="https://www.hackerrank.com/certificates/09ca36bfe3bb"
-                          target="_blank">https://www.hackerrank.com/certificates/09ca36bfe3bb</a>
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div id="publications" class="section scrollspy grey lighten-3 rounded-item hoverable">
-          <div class="container">
-            <h4>Publications</h4>
-            <div class="row">
-              <div class="col s12">
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>
-                        Blockchain-based Intellectual Property Management Using
-                        Smart Contracts |
-                        <span>2nd KDU FOC Student Symposium 2021</span>
-                      </h5>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>
-                        Emotion Based Conditional Gaming Experience Design Using
-                        Kansei Engineering |
-                        <span>Colombo SIGCHI Research Showcase 2021 </span>
-                      </h5>
-                      <p>
-                        <a href="https://colombosigchi.medium.com/?p=4b48aa65afab">
-                          <i class="material-icons"
-                            style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                          Medium Blog
-                        </a>
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>
-                        Models, Developments, Trends, and Evaluation of Software
-                        Product Qualities: A Review Engineering |
-                        <span>2nd KDU FOC Student Symposium 2021. </span>
-                      </h5>
-                      <p>
-                        <a
-                          href="https://www.researchgate.net/publication/358860766_Models_Developments_Trends_and_Evaluation_of_Software_Product_Qualities_A_Review">
-                          <i class="material-icons"
-                            style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                          Research Gate
-                        </a>
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>
-                        Selecting a Software Development Methodology for
-                        Decentralized Applications |
-                        <span>Review, 2021</span>
-                      </h5>
-                      <p>
-                        <a
-                          href="https://www.researchgate.net/publication/357928703_Selecting_a_Software_Development_Methodology_for_Decentralized_Applications">
-                          <i class="material-icons"
-                            style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                          Research Gate
-                        </a>
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-                <div class="section">
-                  <div class="row valign-wrapper">
-                    <div class="col m11 s10">
-                      <h5>
-                        Exploring the Evolution and Modern Trends of
-                        Cryptocurrency |
-                        <span>Review, 2021</span>
-                      </h5>
-                      <p>
-                        <a
-                          href="https://medium.com/@chamathwanigasooriya/exploring-the-evolution-and-modern-trends-of-cryptocurrency-a-review-ad4134e1ea0a">
-                          <i class="material-icons"
-                            style="display: inline-flex; vertical-align: top">keyboard_arrow_right</i>
-                          Medium Blog
-                        </a>
-                      </p>
-                    </div>
-                    <div class="col m1 s2"></div>
-                  </div>
-                  <div class="divider"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="tools" class="section scrollspy">
-          <div class="container">
-            <h4>Tools & Technologies</h4>
-
-            <!-- Languages & Frameworks -->
-            <h5 class="grey-text text-darken-1">Languages & Frameworks</h5>
-            <div class="row">
-              <!-- Java -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://www.java.com/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Spring Boot -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://spring.io/projects/spring-boot" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
-                        alt="Spring Boot" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Angular -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://angular.io/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
-                        alt="Angular" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- TypeScript -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://www.typescriptlang.org/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                        alt="TypeScript" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Python -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://www.python.org/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                        alt="Python" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- HTML5 -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Cloud & DevOps -->
-            <h5 class="grey-text text-darken-1">Cloud & DevOps</h5>
-            <div class="row">
-              <!-- AWS -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://aws.amazon.com/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-                        alt="AWS" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Docker -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://www.docker.com/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                        alt="Docker" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Kubernetes -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://kubernetes.io/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
-                        alt="Kubernetes" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Firebase -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://firebase.google.com/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
-                        alt="Firebase" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Git -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://git-scm.com/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- GitLab -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://gitlab.com/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
-                        alt="GitLab" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Databases & Caching -->
-            <h5 class="grey-text text-darken-1">Databases & Caching</h5>
-            <div class="row">
-              <!-- PostgreSQL -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://www.postgresql.org/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                        alt="PostgreSQL" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- MySQL -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://www.mysql.com/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- MongoDB -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://www.mongodb.com/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                        alt="MongoDB" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Redis -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://redis.io/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Development Tools -->
-            <h5 class="grey-text text-darken-1">Development Tools</h5>
-            <div class="row">
-              <!-- IntelliJ IDEA -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://www.jetbrains.com/idea/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
-                        alt="IntelliJ IDEA" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- VS Code -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://code.visualstudio.com/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                        alt="VS Code" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Postman -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://www.postman.com/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Jira -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://www.atlassian.com/software/jira" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Splunk -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://www.splunk.com/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://www.vectorlogo.zone/logos/splunk/splunk-icon.svg" alt="Splunk" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Linux -->
-              <div class="col s4 m3 l2">
-                <div class="card hoverable waves-effect">
-                  <div class="card-image">
-                    <a href="https://www.linux.org/" target="_blank">
-                      <img class="responsive-img" style="height: 100px; object-fit: contain; padding: 10px;"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ul class="confident">
+              <li>Built a fully functional vehicle spare part trading platform and other projects.</li>
+              <li>Angular, Angular Material, and Firebase.</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="fixed-action-btn">
-    <a class="btn-floating btn-large cyan darken-3" id="menu" href="mailto:chamathwanigasooriya@gmail.com">
-      <i class="large material-icons">mail</i>
-    </a>
-  </div>
+  <!-- ======================= EDUCATION ======================= -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-head" appScrollReveal>
+        <span class="section-label">Education</span>
+        <h2 class="section-title" appTextReveal>Education</h2>
+        <p class="section-sub">
+          Academic foundations that sharpened my engineering mindset.
+        </p>
+      </div>
+      <div class="edu-grid" appScrollReveal>
+        <div class="edu-card edu-featured panel">
+          <div class="edu-top">
+            <span class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </span>
+            <span class="chip chip-accent">Completed Oct 2025</span>
+          </div>
+          <h3>University of Westminster</h3>
+          <p class="item-sub accent">MSc. Advanced Software Engineering — Graduate</p>
+          <p>Coursework: Machine Learning, Enterprise Application Development, Big Data, Concurrent Systems.</p>
+        </div>
+
+        <div class="edu-card panel">
+          <div class="edu-top">
+            <span class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </span>
+            <span class="chip">2019 — 2022</span>
+          </div>
+          <h3>Kotelawala Defence University</h3>
+          <p class="item-sub">BSc (Hons) Software Engineering · GPA 3.68</p>
+          <p><a href="https://www.kdu.ac.lk/Faculty-of-Computing/2019/08/05/codefest2019/">4<sup>th</sup> Place — Code Fest 2019</a></p>
+          <p>Member of the Rotaract Club and the Electronics, Robotics &amp; Innovation Club.</p>
+        </div>
+
+        <div class="edu-card panel">
+          <div class="edu-top">
+            <span class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </span>
+            <span class="chip">2001 — 2017</span>
+          </div>
+          <h3>Regent International College</h3>
+          <p class="item-sub">Secondary Education</p>
+          <p>Senior Prefect (2016–17), Junior Prefect (2015–16), House Vice Captain. Member of Cricket Pool and Science Society.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CREDENTIALS ======================= -->
+  <section id="credentials" class="section section-alt">
+    <div class="container">
+      <div class="section-head" appScrollReveal>
+        <span class="section-label">Credentials & Research</span>
+        <h2 class="section-title" appTextReveal>Certifications &amp; Publications</h2>
+        <p class="section-sub">
+          Continuous learning, verified — from coursework to research.
+        </p>
+      </div>
+
+      <div class="cred-grid" appScrollReveal>
+        <div class="cred-col panel">
+          <div class="cred-head">
+            <span class="card-icon sm">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            </span>
+            <h3 class="cred-title">Certifications</h3>
+          </div>
+          <ul class="cred-list">
+            <li><a href="https://www.udemy.com/certificate/UC-40f5cce8-5dcf-4f3b-a788-5175c7564aff/" target="_blank" rel="noopener">Data Mining &amp; Machine Learning <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></li>
+            <li><a href="https://www.udemy.com/certificate/UC-7b7c7c8e-04fb-4843-b27f-f46ac1877922/" target="_blank" rel="noopener">Data Science <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></li>
+            <li><a href="https://www.udemy.com/certificate/UC-ee8b1acb-8de8-4e86-8661-3894246dc6b4/" target="_blank" rel="noopener">TensorFlow 2 QuickStart for Beginners <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></li>
+            <li><a href="https://www.udemy.com/certificate/UC-42ee97d0-b555-4720-ac2a-1e745830e762/" target="_blank" rel="noopener">Machine Learning &amp; Data Science Bootcamp (R &amp; Python) <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></li>
+            <li><a href="https://www.hackerrank.com/certificates/2980cb3f3ee8" target="_blank" rel="noopener">JavaScript (Basic) <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></li>
+            <li><a href="https://www.hackerrank.com/certificates/4514575271e8" target="_blank" rel="noopener">SQL (Basic) <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></li>
+            <li><a href="https://www.hackerrank.com/certificates/09ca36bfe3bb" target="_blank" rel="noopener">Java (Basic) <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></li>
+          </ul>
+        </div>
+
+        <div class="cred-col panel">
+          <div class="cred-head">
+            <span class="card-icon sm">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </span>
+            <h3 class="cred-title">Publications</h3>
+          </div>
+          <ul class="cred-list pub">
+            <li>
+              <span class="pub-num">01</span>
+              <div>
+                <strong>Blockchain-based Intellectual Property Management Using Smart Contracts</strong>
+                <span>2nd KDU FOC Student Symposium, 2021</span>
+              </div>
+            </li>
+            <li>
+              <span class="pub-num">02</span>
+              <div>
+                <strong>Emotion Based Conditional Gaming Experience Design Using Kansei Engineering</strong>
+                <span>Colombo SIGCHI Research Showcase, 2021</span>
+                <a class="pub-link" href="https://colombosigchi.medium.com/?p=4b48aa65afab" target="_blank" rel="noopener">Medium Blog <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+              </div>
+            </li>
+            <li>
+              <span class="pub-num">03</span>
+              <div>
+                <strong>Models, Developments, Trends, and Evaluation of Software Product Qualities: A Review</strong>
+                <span>2nd KDU FOC Student Symposium, 2021</span>
+                <a class="pub-link" href="https://www.researchgate.net/publication/358860766_Models_Developments_Trends_and_Evaluation_of_Software_Product_Qualities_A_Review" target="_blank" rel="noopener">Research Gate <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+              </div>
+            </li>
+            <li>
+              <span class="pub-num">04</span>
+              <div>
+                <strong>Selecting a Software Development Methodology for Decentralized Applications</strong>
+                <span>Review, 2021</span>
+                <a class="pub-link" href="https://www.researchgate.net/publication/357928703_Selecting_a_Software_Development_Methodology_for_Decentralized_Applications" target="_blank" rel="noopener">Research Gate <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+              </div>
+            </li>
+            <li>
+              <span class="pub-num">05</span>
+              <div>
+                <strong>Exploring the Evolution and Modern Trends of Cryptocurrency</strong>
+                <span>Review, 2021</span>
+                <a class="pub-link" href="https://medium.com/@chamathwanigasooriya/exploring-the-evolution-and-modern-trends-of-cryptocurrency-a-review-ad4134e1ea0a" target="_blank" rel="noopener">Medium Blog <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CONTACT ======================= -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-banner panel" appScrollReveal>
+        <div class="contact-glow" aria-hidden="true"></div>
+        <span class="section-label">Contact</span>
+        <h2 class="contact-title" appTextReveal>Let's build something great</h2>
+        <p class="contact-sub">
+          I'm always open to discussing new projects, creative ideas, or opportunities.
+        </p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:chamathwanigasooriya@gmail.com">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Get in touch
+          </a>
+          <a class="btn btn-ghost" href="/assets/Chamath_Wanigasooriya.pdf" download="Chamath_Wanigasooriya_Resume.pdf">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download resume
+          </a>
+        </div>
+        <ul class="social-list contact-socials">
+          <li><a href="https://github.com/CSWanigasooriya" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.69 1.25 3.35.95.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.26 5.66.41.35.78 1.05.78 2.12v3.14c0 .3.2.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a></li>
+          <li><a href="https://linkedin.com/in/cswanigasooriya" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5c0 .97.8 1.75 1.77 1.75h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg></a></li>
+          <li><a href="https://twitter.com/CSWanigasooriya" aria-label="Twitter / X"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41z"/></svg></a></li>
+          <li><a href="mailto:chamathwanigasooriya@gmail.com" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </main>
-
-<!-- Tap Target Structure -->
-<div class="tap-target teal" data-target="menu">
-  <div class="tap-target-content">
-    <h5>Hey There!</h5>
-    <p>Click here to contact me.</p>
-  </div>
-</div>

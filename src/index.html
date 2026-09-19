@@ -8,23 +8,31 @@
   <meta name="keywords" content="Chamath Wanigasooriya, About Me">
   <meta name="author" content="Chamath Wanigasooriya">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
-  <title>Chamath Wanigasooriya</title>
+  <meta name="theme-color" content="#0a0f1a" id="meta-theme-color">
+  <title>Chamath Wanigasooriya | Software Engineer</title>
   <base href="/">
   <link rel="icon" type="image/x-icon" href="./assets/avatar-rounded.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    // Apply saved or system theme before paint to avoid a flash of the wrong theme.
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var theme = saved === 'light' || saved === 'dark'
+          ? saved
+          : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
 </head>
 
 <body>
   <app-root></app-root>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </html>

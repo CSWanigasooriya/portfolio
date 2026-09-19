@@ -4,6 +4,12 @@
 /dist
 /tmp
 /out-tsc
+
+# Angular build cache
+/.angular
+
+# Firebase local cache (keep .firebaserc tracked)
+/.firebase
 # Only exists if Bazel was run
 /bazel-out
 
