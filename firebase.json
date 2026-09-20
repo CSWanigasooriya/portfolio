@@ -2,13 +2,13 @@
   "hosting": [
     {
       "target": "chamathwanigasooriya",
-      "public": "dist/chamathwanigasooriya",
+      "public": "dist/chamathwanigasooriya/browser",
       "ignore": [
         "**/.*"
       ],
       "headers": [
         {
-          "source": "*.[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].+(css|js)",
+          "source": "**/*-*.@(css|js)",
           "headers": [
             {
               "key": "Cache-Control",

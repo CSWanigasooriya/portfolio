@@ -1,4 +1,7 @@
 {
+  "projects": {
+    "production": "chamath-wanigasooriya"
+  },
   "targets": {
     "chamath-wanigasooriya": {
       "hosting": {
@@ -7,5 +10,6 @@
         ]
       }
     }
-  }
+  },
+  "etags": {}
 }
