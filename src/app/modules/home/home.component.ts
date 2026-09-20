@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, HostListener, OnInit, signal } from '@angular/core';
+import { Component, computed, HostListener, inject, OnInit, signal } from '@angular/core';
 import { ScrollRevealDirective } from '../../scroll-reveal.directive';
-import { ShowcaseDirective } from '../../showcase.directive';
+import { ScrollSpyService } from '../../scroll-spy.service';
 import { SnappyScrollDirective } from '../../snappy-scroll.directive';
 import { TextRevealDirective } from '../../text-reveal.directive';
 import { TiltDirective } from '../../tilt.directive';
@@ -90,44 +90,6 @@ const PROJECTS: Project[] = [
 
 const CATEGORIES: Category[] = ['All', 'Web', 'Android', 'Machine Learning', 'Hardware'];
 
-export interface ShowcasePanel {
-  id: string;
-  kicker: string;
-  title: string;
-  description: string;
-  chips: string[];
-  theme: string;
-}
-
-const SHOWCASE_PANELS: ShowcasePanel[] = [
-  {
-    id: 'backend',
-    kicker: '01 — Backend',
-    title: 'Backend that scales without flinching',
-    description:
-      'Spring Boot and Java services architected as modular microservices — observability-ready, caching-tuned, and built to stay fast under real traffic.',
-    chips: ['Java', 'Spring Boot', 'REST & SOAP', 'Microservices', 'Redis', 'Hazelcast'],
-    theme: '#5eead4',
-  },
-  {
-    id: 'frontend',
-    kicker: '02 — Frontend',
-    title: 'Interfaces that feel instant',
-    description:
-      'Angular applications with clean state, fast rendering, and motion that guides instead of getting in the way — elegant on every screen size.',
-    chips: ['Angular', 'TypeScript', 'RxJS', 'NX Monorepo', 'Nebular', 'Firebase'],
-    theme: '#818cf8',
-  },
-  {
-    id: 'cloud',
-    kicker: '03 — Cloud & DevOps',
-    title: 'Ship confidently, everywhere',
-    description:
-      'From containerized services to automated pipelines — repeatable, observable delivery that turns deployments into a non-event.',
-    chips: ['AWS', 'Docker', 'Kubernetes', 'GitLab CI/CD', 'Splunk', 'Linux'],
-    theme: '#38bdf8',
-  },
-];
 
 const SKILL_GROUPS: { title: string; skills: { label: string; url: string }[] }[] = [
   {
@@ -181,7 +143,7 @@ const NAV_SECTIONS = ['about', 'skills', 'projects', 'experience', 'education', 
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [CommonModule, ScrollRevealDirective, ShowcaseDirective, SnappyScrollDirective, TextRevealDirective, TiltDirective],
+  imports: [CommonModule, ScrollRevealDirective, SnappyScrollDirective, TextRevealDirective, TiltDirective],
 })
 export class HomeComponent implements OnInit {
   readonly greeting = "Hello, I'm Chamath Wanigasooriya.";
@@ -190,7 +152,6 @@ export class HomeComponent implements OnInit {
   readonly categories = CATEGORIES;
   readonly skillGroups = SKILL_GROUPS;
   readonly navSections = NAV_SECTIONS;
-  readonly showcasePanels = SHOWCASE_PANELS;
 
   readonly activeFilter = signal<Category>('All');
 
@@ -202,7 +163,8 @@ export class HomeComponent implements OnInit {
     return this.projects.filter((p) => p.categories.includes(filter));
   });
 
-  readonly activeSection = signal<string>('about');
+  private readonly scrollSpy = inject(ScrollSpyService);
+  readonly activeSection = this.scrollSpy.activeSection;
   readonly showFabHint = signal(false);
 
   ngOnInit(): void {
@@ -210,6 +172,7 @@ export class HomeComponent implements OnInit {
     this.showFabHint.set(
       typeof localStorage !== 'undefined' && !localStorage.getItem('fabHintSeen'),
     );
+    this.updateActiveSection();
   }
 
   setFilter(category: Category): void {
@@ -237,25 +200,61 @@ export class HomeComponent implements OnInit {
     }, 22);
   }
 
+  private isTicking = false;
+
   @HostListener('window:scroll')
   onScroll(): void {
-    this.updateActiveSection();
+    if (!this.isTicking) {
+      window.requestAnimationFrame(() => {
+        this.updateActiveSection();
+        this.isTicking = false;
+      });
+      this.isTicking = true;
+    }
   }
 
   private updateActiveSection(): void {
-    const scrollPos = window.scrollY + 140;
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const scrollY = window.scrollY;
+    const triggerPoint = scrollY + window.innerHeight * 0.38;
+
+    // If still in the hero banner (before About section enters view)
+    const aboutSection = document.getElementById('about');
+    if (aboutSection && scrollY < aboutSection.offsetTop - window.innerHeight * 0.45) {
+      this.scrollSpy.setActiveSection('hero');
+      return;
+    }
+
     let current = NAV_SECTIONS[0];
     for (const id of NAV_SECTIONS) {
       const section = document.getElementById(id);
-      if (section && section.offsetTop <= scrollPos) {
+      if (section && section.offsetTop <= triggerPoint) {
         current = id;
       }
     }
+
     const scrollBottom =
-      window.innerHeight + window.scrollY >= document.body.offsetHeight - 60;
+      window.innerHeight + scrollY >= document.body.offsetHeight - 80;
     if (scrollBottom) {
       current = NAV_SECTIONS[NAV_SECTIONS.length - 1];
     }
-    this.activeSection.set(current);
+
+    const prevSection = this.scrollSpy.activeSection();
+    this.scrollSpy.setActiveSection(current);
+
+    // Only scroll horizontal navInner on mobile if section changed (NEVER call scrollIntoView!)
+    if (prevSection !== current) {
+      const navInner = document.querySelector('.section-nav-inner') as HTMLElement | null;
+      const activePill = document.querySelector(`.section-nav a[href="#${current}"]`) as HTMLElement | null;
+      if (navInner && activePill && navInner.scrollWidth > navInner.clientWidth) {
+        const pillLeft = activePill.offsetLeft;
+        const pillWidth = activePill.offsetWidth;
+        const targetScroll = pillLeft - navInner.clientWidth / 2 + pillWidth / 2;
+        navInner.scrollTo({ left: targetScroll, behavior: 'smooth' });
+      }
+    }
   }
 }

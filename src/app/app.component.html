@@ -22,10 +22,14 @@
       </a>
 
       <nav class="nav-links" appSnappyScroll>
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+        <a href="#about"
+          [class.active]="activeSection() === 'about' || activeSection() === 'skills'">About</a>
+        <a href="#projects"
+          [class.active]="activeSection() === 'projects'">Projects</a>
+        <a href="#experience"
+          [class.active]="activeSection() === 'experience' || activeSection() === 'education' || activeSection() === 'credentials'">Experience</a>
+        <a href="#contact"
+          [class.active]="activeSection() === 'contact'">Contact</a>
       </nav>
 
       <button
@@ -62,10 +66,18 @@
       </div>
     </div>
     <nav class="sidenav-links" appSnappyScroll>
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="toggleSidenav(false)">Profile</a>
-      <a href="#projects" (click)="toggleSidenav(false)">Projects</a>
-      <a href="#experience" (click)="toggleSidenav(false)">Experience</a>
-      <a href="#contact" (click)="toggleSidenav(false)">Contact</a>
+      <a href="#about"
+        [class.active]="activeSection() === 'about' || activeSection() === 'skills'"
+        (click)="toggleSidenav(false)">About</a>
+      <a href="#projects"
+        [class.active]="activeSection() === 'projects'"
+        (click)="toggleSidenav(false)">Projects</a>
+      <a href="#experience"
+        [class.active]="activeSection() === 'experience' || activeSection() === 'education' || activeSection() === 'credentials'"
+        (click)="toggleSidenav(false)">Experience</a>
+      <a href="#contact"
+        [class.active]="activeSection() === 'contact'"
+        (click)="toggleSidenav(false)">Contact</a>
     </nav>
   </aside>
 

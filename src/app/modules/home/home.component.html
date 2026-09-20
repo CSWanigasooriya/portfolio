@@ -55,9 +55,14 @@
       </div>
     </div>
 
-    <a class="scroll-cue" href="#about" aria-label="Scroll to content">
-      <span class="mouse" aria-hidden="true"></span>
-      Scroll
+    <a class="scroll-cue" href="#about" aria-label="Scroll down to explore" [class.hidden]="activeSection() !== 'hero'">
+      <div class="scroll-cue-badge">
+        <span class="mouse" aria-hidden="true"></span>
+        <span class="scroll-text">Scroll to explore</span>
+        <svg class="scroll-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
     </a>
   </section>
 
@@ -100,46 +105,209 @@
         </p>
       </div>
 
-      <div class="about-grid" appScrollReveal>
-        <div class="about-card about-focus panel">
-          <div class="card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+      <!-- ======================= BENTO ABOUT ======================= -->
+      <div class="bento-grid" appScrollReveal>
+        <!-- Bento 1: Core Focus & Engineering Philosophy (8 cols) -->
+        <div class="bento-card bento-hero panel">
+          <div class="bento-card-header">
+            <div class="bento-badge">
+              <span class="card-icon sm">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </span>
+              <span class="badge-text">Engineering Philosophy</span>
+            </div>
+            <span class="bento-tag">Full-Stack · Cloud</span>
           </div>
-          <div>
-            <h3>My focus</h3>
-            <p>
-              I work across the stack — architecting resilient Java back-ends with
-              Spring, and crafting fast, accessible front-ends with Angular. I care
-              about performance, maintainability, and delivering value to the
-              organization through hard work, research, and perseverance.
+
+          <div class="bento-content">
+            <h3 class="bento-headline">Architecting Scalable Backends, Crafting Fluid Frontends</h3>
+            <p class="bento-text">
+              I specialize in bridging high-throughput enterprise infrastructure with modern, accessible user interfaces. 
+              My core craft centers on architecting resilient microservices with <strong>Java &amp; Spring Boot</strong>, 
+              optimizing high-concurrency systems with <strong>Redis &amp; Docker</strong>, and engineering fast, reactive clients with <strong>Angular</strong>.
             </p>
           </div>
+
+          <div class="bento-tech-stack">
+            <span class="bento-pill"><span class="pill-dot java"></span>Java &amp; Spring Boot</span>
+            <span class="bento-pill"><span class="pill-dot angular"></span>Angular &amp; TypeScript</span>
+            <span class="bento-pill"><span class="pill-dot cloud"></span>AWS, EC2 &amp; ECS</span>
+            <span class="bento-pill"><span class="pill-dot micro"></span>Microservices &amp; REST</span>
+            <span class="bento-pill"><span class="pill-dot data"></span>Redis &amp; PostgreSQL</span>
+            <span class="bento-pill"><span class="pill-dot tool"></span>Splunk &amp; Docker</span>
+          </div>
+
+          <div class="bento-quote-bar">
+            <div class="quote-symbol">“</div>
+            <p class="quote-text">Dedicated to performance, code quality, and delivering tangible business value through engineering rigor and continuous research.</p>
+          </div>
         </div>
 
-        <div class="about-card about-facts panel">
-          <div class="card-icon sm">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        <!-- Bento 2: Quick Facts & Live Status (4 cols) -->
+        <div class="bento-card bento-facts panel">
+          <div class="bento-card-header">
+            <div class="bento-badge">
+              <span class="card-icon sm">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </span>
+              <span class="badge-text">Quick Facts</span>
+            </div>
+            <div class="beacon-status" title="Current Career Status">
+              <span class="beacon-ping"></span>
+              <span class="beacon-dot"></span>
+              <span class="beacon-label">Open to work</span>
+            </div>
           </div>
-          <h3>Quick facts</h3>
-          <ul class="facts-list">
-            <li><span class="fact-label">Location</span><span>Sri Lanka · Remote-friendly</span></li>
-            <li><span class="fact-label">Stack</span><span>Back-end &amp; Front-end</span></li>
-            <li><span class="fact-label">Focus</span><span>Microservices &amp; Cloud</span></li>
-            <li><span class="fact-label">Status</span><span class="fact-open">Open to work</span></li>
+
+          <ul class="facts-modern-list">
+            <li class="fact-item">
+              <span class="fact-meta">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Location
+              </span>
+              <span class="fact-data">Sri Lanka · Remote</span>
+            </li>
+            <li class="fact-item">
+              <span class="fact-meta">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                Timezone
+              </span>
+              <span class="fact-data">GMT +5:30 (IST)</span>
+            </li>
+            <li class="fact-item">
+              <span class="fact-meta">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                Core Stack
+              </span>
+              <span class="fact-data">Spring Boot · Angular</span>
+            </li>
+            <li class="fact-item">
+              <span class="fact-meta">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                Focus
+              </span>
+              <span class="fact-data">Cloud &amp; Microservices</span>
+            </li>
+            <li class="fact-item">
+              <span class="fact-meta">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Current Role
+              </span>
+              <span class="fact-data">Senior Software Engineer</span>
+            </li>
           </ul>
+
+          <div class="bento-facts-action">
+            <a href="#contact" class="btn-bento-link">
+              <span>Connect with me</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
         </div>
 
-        <div class="about-card about-highlights panel">
-          <div class="card-icon sm">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+        <!-- Bento 3: Track Record & Impact (4 cols) -->
+        <div class="bento-card bento-stats panel">
+          <div class="bento-card-header">
+            <div class="bento-badge">
+              <span class="card-icon sm">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+              </span>
+              <span class="badge-text">Track Record</span>
+            </div>
+            <span class="bento-tag accent">Proven Results</span>
           </div>
-          <h3>Highlights</h3>
-          <ul class="about-list">
-            <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Resolved performance issues on AWS EC2, ECS, and Docker.</li>
-            <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Designed scalable microservices and modular architectures.</li>
-            <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Automated pipelines and tooling to accelerate delivery.</li>
-            <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Published research in blockchain and software quality.</li>
-          </ul>
+
+          <div class="metrics-quad-grid">
+            <div class="metric-quad-box">
+              <div class="metric-top-val">
+                <span class="metric-big-num">3+</span>
+                <span class="metric-plus">Yrs</span>
+              </div>
+              <span class="metric-label">Engineering Tenure</span>
+              <span class="metric-detail">Trainee to Senior</span>
+            </div>
+
+            <div class="metric-quad-box">
+              <div class="metric-top-val">
+                <span class="metric-big-num">7+</span>
+                <span class="metric-plus">Apps</span>
+              </div>
+              <span class="metric-label">Production &amp; OSS</span>
+              <span class="metric-detail">Web, Cloud &amp; Mobile</span>
+            </div>
+
+            <div class="metric-quad-box">
+              <div class="metric-top-val">
+                <span class="metric-big-num">4</span>
+                <span class="metric-plus">Papers</span>
+              </div>
+              <span class="metric-label">Research Works</span>
+              <span class="metric-detail">Blockchain &amp; QA</span>
+            </div>
+
+            <div class="metric-quad-box">
+              <div class="metric-top-val">
+                <span class="metric-big-num">F500</span>
+              </div>
+              <span class="metric-label">Client Optimization</span>
+              <span class="metric-detail">AWS &amp; Splunk Tuning</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento 4: Core Technical Highlights (8 cols) -->
+        <div class="bento-card bento-highlights panel">
+          <div class="bento-card-header">
+            <div class="bento-badge">
+              <span class="card-icon sm">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+              </span>
+              <span class="badge-text">Technical Highlights</span>
+            </div>
+            <span class="bento-hint">Enterprise impact &amp; capabilities</span>
+          </div>
+
+          <div class="highlight-quad-grid">
+            <div class="highlight-quad-item highlight-amber">
+              <div class="highlight-quad-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <div class="highlight-quad-text">
+                <h4>Cloud &amp; Container Performance</h4>
+                <p>Diagnosed and resolved critical bottlenecks across AWS EC2, ECS, and Docker containers using Splunk telemetry.</p>
+              </div>
+            </div>
+
+            <div class="highlight-quad-item highlight-teal">
+              <div class="highlight-quad-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <div class="highlight-quad-text">
+                <h4>Microservices &amp; Caching</h4>
+                <p>Designed scalable microservices with Spring Boot and low-latency Redis/Hazelcast caching layers for high concurrency.</p>
+              </div>
+            </div>
+
+            <div class="highlight-quad-item highlight-purple">
+              <div class="highlight-quad-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <div class="highlight-quad-text">
+                <h4>DevOps &amp; Pipeline Automation</h4>
+                <p>Created the team's first automated GitLab CI/CD pipeline, automating builds, tests, containerization, and deployments.</p>
+              </div>
+            </div>
+
+            <div class="highlight-quad-item highlight-sky">
+              <div class="highlight-quad-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              </div>
+              <div class="highlight-quad-text">
+                <h4>Peer-Reviewed Research</h4>
+                <p>Published 4 academic papers in smart contracts, decentralized IP management, and software quality models.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -303,43 +471,6 @@
     </div>
   </section>
 
-  <!-- ======================= SHOWCASE ======================= -->
-  <section class="showcase" appShowcase aria-label="How I build">
-    <div class="showcase-track">
-      <div class="showcase-sticky">
-        @for (panel of showcasePanels; track panel.id; let i = $index) {
-          <div class="showcase-panel" [style.--panel]="panel.theme">
-            <div class="showcase-panel-bg" aria-hidden="true"></div>
-            <div class="showcase-panel-inner">
-              <div class="showcase-copy">
-                <span class="showcase-kicker">{{ panel.kicker }}</span>
-                <h3 class="showcase-title">{{ panel.title }}</h3>
-                <p class="showcase-desc">{{ panel.description }}</p>
-                <div class="showcase-chips">
-                  @for (chip of panel.chips; track chip) {
-                    <span class="chip">{{ chip }}</span>
-                  }
-                </div>
-              </div>
-              <div class="showcase-art" aria-hidden="true">
-                <span class="showcase-num">0{{ i + 1 }}</span>
-              </div>
-            </div>
-          </div>
-        }
-
-        <aside class="showcase-nav" aria-hidden="true">
-          <div class="showcase-dots">
-            @for (panel of showcasePanels; track panel.id) {
-              <span class="showcase-dot"></span>
-            }
-          </div>
-          <span class="showcase-counter">01</span>
-        </aside>
-      </div>
-    </div>
-  </section>
-
   <!-- ======================= EXPERIENCE ======================= -->
   <section id="experience" class="section section-alt">
     <div class="container">
@@ -485,72 +616,164 @@
       </div>
 
       <div class="cred-grid" appScrollReveal>
+        <!-- Certifications Card -->
         <div class="cred-col panel">
           <div class="cred-head">
-            <span class="card-icon sm">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-            </span>
-            <h3 class="cred-title">Certifications</h3>
+            <div class="cred-head-left">
+              <span class="card-icon sm">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              </span>
+              <h3 class="cred-title">Certifications</h3>
+            </div>
+            <span class="bento-tag accent">7 Verified</span>
           </div>
+
           <ul class="cred-list">
-            <li><a href="https://www.udemy.com/certificate/UC-40f5cce8-5dcf-4f3b-a788-5175c7564aff/" target="_blank" rel="noopener">Data Mining &amp; Machine Learning <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></li>
-            <li><a href="https://www.udemy.com/certificate/UC-7b7c7c8e-04fb-4843-b27f-f46ac1877922/" target="_blank" rel="noopener">Data Science <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></li>
-            <li><a href="https://www.udemy.com/certificate/UC-ee8b1acb-8de8-4e86-8661-3894246dc6b4/" target="_blank" rel="noopener">TensorFlow 2 QuickStart for Beginners <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></li>
-            <li><a href="https://www.udemy.com/certificate/UC-42ee97d0-b555-4720-ac2a-1e745830e762/" target="_blank" rel="noopener">Machine Learning &amp; Data Science Bootcamp (R &amp; Python) <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></li>
-            <li><a href="https://www.hackerrank.com/certificates/2980cb3f3ee8" target="_blank" rel="noopener">JavaScript (Basic) <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></li>
-            <li><a href="https://www.hackerrank.com/certificates/4514575271e8" target="_blank" rel="noopener">SQL (Basic) <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></li>
-            <li><a href="https://www.hackerrank.com/certificates/09ca36bfe3bb" target="_blank" rel="noopener">Java (Basic) <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></li>
+            <li class="cred-item">
+              <a href="https://www.udemy.com/certificate/UC-40f5cce8-5dcf-4f3b-a788-5175c7564aff/" target="_blank" rel="noopener">
+                <div class="cred-info">
+                  <span class="cred-name">Data Mining &amp; Machine Learning</span>
+                  <span class="cred-issuer">Udemy Certificate</span>
+                </div>
+                <svg class="cred-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </li>
+            <li class="cred-item">
+              <a href="https://www.udemy.com/certificate/UC-7b7c7c8e-04fb-4843-b27f-f46ac1877922/" target="_blank" rel="noopener">
+                <div class="cred-info">
+                  <span class="cred-name">Data Science Specialization</span>
+                  <span class="cred-issuer">Udemy Certificate</span>
+                </div>
+                <svg class="cred-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </li>
+            <li class="cred-item">
+              <a href="https://www.udemy.com/certificate/UC-ee8b1acb-8de8-4e86-8661-3894246dc6b4/" target="_blank" rel="noopener">
+                <div class="cred-info">
+                  <span class="cred-name">TensorFlow 2 QuickStart for Beginners</span>
+                  <span class="cred-issuer">Deep Learning &amp; AI · Udemy</span>
+                </div>
+                <svg class="cred-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </li>
+            <li class="cred-item">
+              <a href="https://www.udemy.com/certificate/UC-42ee97d0-b555-4720-ac2a-1e745830e762/" target="_blank" rel="noopener">
+                <div class="cred-info">
+                  <span class="cred-name">Machine Learning &amp; Data Science Bootcamp</span>
+                  <span class="cred-issuer">R &amp; Python Programming · Udemy</span>
+                </div>
+                <svg class="cred-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </li>
+            <li class="cred-item">
+              <a href="https://www.hackerrank.com/certificates/2980cb3f3ee8" target="_blank" rel="noopener">
+                <div class="cred-info">
+                  <span class="cred-name">JavaScript (Basic) Skill Certificate</span>
+                  <span class="cred-issuer">HackerRank Certified</span>
+                </div>
+                <svg class="cred-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </li>
+            <li class="cred-item">
+              <a href="https://www.hackerrank.com/certificates/4514575271e8" target="_blank" rel="noopener">
+                <div class="cred-info">
+                  <span class="cred-name">SQL (Basic) Skill Certificate</span>
+                  <span class="cred-issuer">HackerRank Certified</span>
+                </div>
+                <svg class="cred-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </li>
+            <li class="cred-item">
+              <a href="https://www.hackerrank.com/certificates/09ca36bfe3bb" target="_blank" rel="noopener">
+                <div class="cred-info">
+                  <span class="cred-name">Java (Basic) Skill Certificate</span>
+                  <span class="cred-issuer">HackerRank Certified</span>
+                </div>
+                <svg class="cred-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </li>
           </ul>
+
+          <div class="cred-footer">
+            <a href="https://linkedin.com/in/cswanigasooriya" target="_blank" rel="noopener" class="cred-footer-link">
+              <span>View licenses on LinkedIn</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
         </div>
 
+        <!-- Publications Card -->
         <div class="cred-col panel">
           <div class="cred-head">
-            <span class="card-icon sm">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-            </span>
-            <h3 class="cred-title">Publications</h3>
+            <div class="cred-head-left">
+              <span class="card-icon sm">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </span>
+              <h3 class="cred-title">Publications</h3>
+            </div>
+            <span class="bento-tag accent">5 Papers</span>
           </div>
+
           <ul class="cred-list pub">
-            <li>
+            <li class="pub-item">
               <span class="pub-num">01</span>
-              <div>
-                <strong>Blockchain-based Intellectual Property Management Using Smart Contracts</strong>
-                <span>2nd KDU FOC Student Symposium, 2021</span>
+              <div class="pub-content">
+                <strong class="pub-title">Blockchain-based Intellectual Property Management Using Smart Contracts</strong>
+                <span class="pub-venue">2nd KDU FOC Student Symposium, 2021</span>
               </div>
             </li>
-            <li>
+            <li class="pub-item">
               <span class="pub-num">02</span>
-              <div>
-                <strong>Emotion Based Conditional Gaming Experience Design Using Kansei Engineering</strong>
-                <span>Colombo SIGCHI Research Showcase, 2021</span>
-                <a class="pub-link" href="https://colombosigchi.medium.com/?p=4b48aa65afab" target="_blank" rel="noopener">Medium Blog <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+              <div class="pub-content">
+                <strong class="pub-title">Emotion Based Conditional Gaming Experience Design Using Kansei Engineering</strong>
+                <span class="pub-venue">Colombo SIGCHI Research Showcase, 2021</span>
+                <a class="pub-link" href="https://colombosigchi.medium.com/?p=4b48aa65afab" target="_blank" rel="noopener">
+                  <span>Read on Medium</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
               </div>
             </li>
-            <li>
+            <li class="pub-item">
               <span class="pub-num">03</span>
-              <div>
-                <strong>Models, Developments, Trends, and Evaluation of Software Product Qualities: A Review</strong>
-                <span>2nd KDU FOC Student Symposium, 2021</span>
-                <a class="pub-link" href="https://www.researchgate.net/publication/358860766_Models_Developments_Trends_and_Evaluation_of_Software_Product_Qualities_A_Review" target="_blank" rel="noopener">Research Gate <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+              <div class="pub-content">
+                <strong class="pub-title">Models, Developments, Trends, and Evaluation of Software Product Qualities: A Review</strong>
+                <span class="pub-venue">2nd KDU FOC Student Symposium, 2021</span>
+                <a class="pub-link" href="https://www.researchgate.net/publication/358860766_Models_Developments_Trends_and_Evaluation_of_Software_Product_Qualities_A_Review" target="_blank" rel="noopener">
+                  <span>ResearchGate Paper</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
               </div>
             </li>
-            <li>
+            <li class="pub-item">
               <span class="pub-num">04</span>
-              <div>
-                <strong>Selecting a Software Development Methodology for Decentralized Applications</strong>
-                <span>Review, 2021</span>
-                <a class="pub-link" href="https://www.researchgate.net/publication/357928703_Selecting_a_Software_Development_Methodology_for_Decentralized_Applications" target="_blank" rel="noopener">Research Gate <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+              <div class="pub-content">
+                <strong class="pub-title">Selecting a Software Development Methodology for Decentralized Applications</strong>
+                <span class="pub-venue">Peer-Reviewed Review Paper, 2021</span>
+                <a class="pub-link" href="https://www.researchgate.net/publication/357928703_Selecting_a_Software_Development_Methodology_for_Decentralized_Applications" target="_blank" rel="noopener">
+                  <span>ResearchGate Paper</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
               </div>
             </li>
-            <li>
+            <li class="pub-item">
               <span class="pub-num">05</span>
-              <div>
-                <strong>Exploring the Evolution and Modern Trends of Cryptocurrency</strong>
-                <span>Review, 2021</span>
-                <a class="pub-link" href="https://medium.com/@chamathwanigasooriya/exploring-the-evolution-and-modern-trends-of-cryptocurrency-a-review-ad4134e1ea0a" target="_blank" rel="noopener">Medium Blog <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+              <div class="pub-content">
+                <strong class="pub-title">Exploring the Evolution and Modern Trends of Cryptocurrency</strong>
+                <span class="pub-venue">Cryptographic &amp; Distributed Ledger Review, 2021</span>
+                <a class="pub-link" href="https://medium.com/@chamathwanigasooriya/exploring-the-evolution-and-modern-trends-of-cryptocurrency-a-review-ad4134e1ea0a" target="_blank" rel="noopener">
+                  <span>Read on Medium</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
               </div>
             </li>
           </ul>
+
+          <div class="cred-footer">
+            <a href="https://www.researchgate.net/profile/Chamath-Wanigasooriya/research" target="_blank" rel="noopener" class="cred-footer-link">
+              <span>Explore publications on ResearchGate</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
